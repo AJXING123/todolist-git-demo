@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>TodoList</title></head>
+<body>
+  <h1>待办事项</h1>
+  <input id="todoInput" placeholder="输入待办事项">
+  <button onclick="addTodo()">添加</button>
+  <ul id="todoList"></ul>
+  <script>
+    function addTodo(){
+      const input=document.getElementById('todoInput');
+      const li=document.createElement('li');
+      li.textContent=input.value;
+      document.getElementById('todoList').appendChild(li);
+      input.value='';
+    }
+  </script>
+</body>
+</html>
