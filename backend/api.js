@@ -21,3 +21,12 @@ function deleteTodo(id) {
 }
 
 module.exports = { createTodo, getTodos, updateTodo, deleteTodo };
+
+// 待办筛选接口
+function filterTodos(status) {
+  if (status === 'done') return todos.filter(t => t.done);
+  if (status === 'undone') return todos.filter(t => !t.done);
+  return todos;
+}
+
+module.exports = { createTodo, getTodos, updateTodo, deleteTodo, filterTodos };
